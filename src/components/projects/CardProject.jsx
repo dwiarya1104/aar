@@ -1,0 +1,34 @@
+import Tools from "./Tools";
+
+export default function CardProject({ data }) {
+  return (
+    <div
+      data-aos="fade-up"
+      data-aos-duration="2000"
+      className=" p-10 rounded-2xl md:h-[400px] card-grainy card-shine-effect shadow-white shadow-sm bg-primary my-5 relative overflow-hidden"
+    >
+      <div className="card-body">
+        <div className="hero">
+          <div className="hero-content grid md:grid-cols-2 grid-cols-1 md:relative">
+            <div className="flex flex-col justify-between pb-10 mt-10">
+              <h1 className="text-4xl font-bold text-white">{data.title}</h1>
+              <p className="py-3 text-white text-xs font-thin opacity-70 md:pr-10">
+                {data.description}
+              </p>
+              <div className="grid grid-cols-4 gap-2">
+                {data.list &&
+                  data.list.map((list, index) => (
+                    <Tools key={index} tools={list} />
+                  ))}
+              </div>
+            </div>
+            <img
+              src={data.image}
+              className="md:max-w-lg rounded-lg shadow-3xl md:absolute right-0 md:mt-20  "
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
