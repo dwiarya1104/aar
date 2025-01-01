@@ -7,7 +7,7 @@ export default function Projects() {
       <div
         data-aos="fade-up"
         data-aos-duration="1500"
-        className="text-orange font-bold text-5xl mb-3"
+        className="text-orange font-bold md:text-5xl md:text-start text-center text-4xl mb-3"
       >
         Recent Projects
       </div>

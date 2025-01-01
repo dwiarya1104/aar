@@ -10,12 +10,12 @@ export default function CardProject({ data }) {
       <div className="card-body">
         <div className="hero">
           <div className="hero-content grid md:grid-cols-2 grid-cols-1 md:relative">
-            <div className="flex flex-col justify-between pb-10 mt-10">
-              <h1 className="text-4xl font-bold text-white">{data.title}</h1>
-              <p className="py-3 text-white text-xs font-thin opacity-70 md:pr-10">
+            <div className="flex flex-col justify-between pb-10 mt-3">
+              <h1 className="md:text-4xl text-3xl font-bold text-white">{data.title}</h1>
+              <p className="py-3 text-white text-sm font-thin opacity-70 md:pr-10">
                 {data.description}
               </p>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid md:grid-cols-4 grid-cols-3 gap-2">
                 {data.list &&
                   data.list.map((list, index) => (
                     <Tools key={index} tools={list} />
