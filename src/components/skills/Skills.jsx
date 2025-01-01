@@ -14,7 +14,7 @@ const Circle = forwardRef(({ className, title, children }, ref) => {
       //   className
       // )}
       className={cn(
-        "z-10 flex size-20 items-center justify-center rounded-full p-3",
+        "z-10 flex md:size-24 size-20 items-center justify-center rounded-full p-3",
         className
       )}
     >
@@ -27,54 +27,65 @@ Circle.displayName = "Circle";
 
 export default function Skills() {
   const containerRef = useRef(null);
-  const div1Ref = useRef(null);
-  const div2Ref = useRef(null);
-  const div3Ref = useRef(null);
-  const div4Ref = useRef(null);
-  const div5Ref = useRef(null);
-  const div6Ref = useRef(null);
-  const div7Ref = useRef(null);
+  const laravelRef = useRef(null);
+  const nestJsRef = useRef(null);
+  const jsRef = useRef(null);
+  const skillsRef = useRef(null);
+  const reactRef = useRef(null);
+  const tsRef = useRef(null);
+  const figmaRef = useRef(null);
+  const tailwindRef = useRef(null);
+  const phpRef = useRef(null);
 
   return (
-    <div>
+    <div className="mt-20">
       <div
-        className="relative flex h-[500px] w-full items-center justify-center overflow-hidden bg-gradient-to-b from-dark to-primary p-10"
+        className="relative flex h-auto w-full items-center justify-center overflow-hidden bg-gradient-to-b from-dark to-primary p-10"
         ref={containerRef}
       >
-        <div className="flex size-full flex-col max-w-3xl max-h-[200px] items-stretch justify-between gap-10">
+        <div className="flex size-full flex-col md:max-w-4xl w-full max-h-fit items-stretch justify-between gap-14">
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div1Ref}>
+            <Circle ref={laravelRef}>
               <Icons.laravel />
             </Circle>
-            <Circle ref={div5Ref}>
+            <Circle ref={reactRef}>
               <Icons.react />
             </Circle>
           </div>
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div2Ref}>
-              <Icons.nestjs />
-            </Circle>
+            <div className="flex flex-col gap-8">
+              <Circle ref={nestJsRef}>
+                <Icons.nestjs />
+              </Circle>
+              <Circle ref={tailwindRef}>
+                <Icons.tailwind />
+              </Circle>
+            </div>
             <div
-              ref={div4Ref}
-              className="z-10 rounded-md p-3 bg-gradient-to-r from-orange-500 to-blue-20 shadow-inner"
+              ref={skillsRef}
+              className="z-10 border border-white rounded-md p-3 bg-gradient-to-r from-orange-500 to-blue-20 shadow-inner"
             >
               <p
                 data-aos="zoom-in"
-                className="text-white font-bold text-4xl border-white "
+                className="text-white font-bold md:text-4xl text-2xl "
               >
                 SKILLS
               </p>
             </div>
-
-            <Circle ref={div6Ref}>
-              <Icons.typescript />
-            </Circle>
+            <div className="flex flex-col gap-8">
+              <Circle ref={phpRef}>
+                <Icons.php />
+              </Circle>
+              <Circle ref={tsRef}>
+                <Icons.typescript />
+              </Circle>
+            </div>
           </div>
           <div className="flex flex-row items-center justify-between">
-            <Circle title="JavaScript" ref={div3Ref}>
+            <Circle title="JavaScript" ref={jsRef}>
               <Icons.javascript />
             </Circle>
-            <Circle title="Figma" ref={div7Ref}>
+            <Circle title="Figma" ref={figmaRef}>
               <Icons.figma />
             </Circle>
           </div>
@@ -83,48 +94,70 @@ export default function Skills() {
         {/* laravel */}
         <AnimatedBeam
           containerRef={containerRef}
-          fromRef={div1Ref}
-          toRef={div4Ref}
+          fromRef={laravelRef}
+          toRef={skillsRef}
           curvature={30}
-          endYOffset={-10}
+          pathColor="#fff"
         />
         {/* nestjs */}
         <AnimatedBeam
           containerRef={containerRef}
-          fromRef={div2Ref}
-          toRef={div4Ref}
+          fromRef={nestJsRef}
+          toRef={skillsRef}
+          curvature={30}
+          pathColor="#fff"
         />
         {/* js */}
         <AnimatedBeam
           containerRef={containerRef}
-          fromRef={div3Ref}
-          toRef={div4Ref}
+          fromRef={jsRef}
+          toRef={skillsRef}
           curvature={-30}
-          endYOffset={10}
+          pathColor="#fff"
         />
         {/* react */}
         <AnimatedBeam
           containerRef={containerRef}
-          fromRef={div5Ref}
-          toRef={div4Ref}
+          fromRef={reactRef}
+          toRef={skillsRef}
           curvature={-30}
-          endYOffset={10}
+          pathColor="#fff"
           reverse
         />
         {/* ts */}
         <AnimatedBeam
           containerRef={containerRef}
-          fromRef={div6Ref}
-          toRef={div4Ref}
+          fromRef={tsRef}
+          toRef={skillsRef}
+          pathColor="#fff"
+          curvature={-30}
           reverse
         />
         {/* figma */}
         <AnimatedBeam
           containerRef={containerRef}
-          fromRef={div7Ref}
-          toRef={div4Ref}
+          fromRef={figmaRef}
+          toRef={skillsRef}
+          curvature={-30}
+          pathColor="#fff"
+          reverse
+        />
+        {/* tailwind */}
+        <AnimatedBeam
+          containerRef={containerRef}
+          fromRef={tailwindRef}
+          toRef={skillsRef}
+          curvature={-30}
+          pathColor="#fff"
+          reverse
+        />
+        {/* php */}
+        <AnimatedBeam
+          containerRef={containerRef}
+          fromRef={phpRef}
+          toRef={skillsRef}
           curvature={30}
-          endYOffset={-10}
+          pathColor="#fff"
           reverse
         />
       </div>

@@ -17,7 +17,7 @@ export default function CardProject({ data }) {
               <p className="py-3 text-white text-sm font-thin opacity-70 md:pr-10">
                 {data.description}
               </p>
-              <div className="grid md:grid-cols-4 grid-cols-3 gap-2">
+              <div className="grid md:grid-cols-4 grid-cols-2 gap-2">
                 {data.list &&
                   data.list.map((list, index) => (
                     <Tools key={index} tools={list} />
