@@ -1,4 +1,6 @@
 import img from "../../assets/pict.png";
+import cv from "../../assets/CV - Dwi Arya Putra.pdf";
+
 
 export default function Hero() {
   return (
@@ -52,7 +54,9 @@ export default function Hero() {
                 <span className="spark" />
               </span>
               <span className="backdrop" />
-              <span className="text">My Resume</span>
+              <span className="text">
+                <a href={cv} download="Resume - Dwi Arya Putra">My Resume</a> 
+                </span>
             </div>
           </div>
         </div>
