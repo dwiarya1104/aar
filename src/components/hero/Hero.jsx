@@ -55,7 +55,7 @@ export default function Hero() {
               </span>
               <span className="backdrop" />
               <span className="text">
-                <a href={cv} download="Resume - Dwi Arya Putra">My Resume</a> 
+                <a href={cv} download="Resume - Dwi Arya Putra.pdf">My Resume</a> 
                 </span>
             </div>
           </div>
