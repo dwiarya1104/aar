@@ -8,6 +8,7 @@ import Hero from "./components/hero/Hero";
 import Contact from "./components/contact/Contact";
 import Skills from "./components/skills/Skills";
 import SmoothScroll from "./components/SmoothScroll";
+import { About } from "./components/about/About";
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
       <SmoothScroll>
         {/* <Sidebar /> */}
         <Hero />
+        <About />
         <Skills />
         <Projects />
         <Contact />

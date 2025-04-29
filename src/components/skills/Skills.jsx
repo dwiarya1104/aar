@@ -38,9 +38,11 @@ export default function Skills() {
   const phpRef = useRef(null);
 
   return (
-    <div className="mt-20">
+    <div className="bg-gradient-to-b from-primary to-dark">
       <div
-        className="relative flex h-auto w-full items-center justify-center overflow-hidden bg-gradient-to-b from-dark to-primary p-10"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        className="relative flex h-auto w-full items-center justify-center overflow-hidden  p-10"
         ref={containerRef}
       >
         <div className="flex size-full flex-col md:max-w-4xl w-full max-h-fit items-stretch justify-between gap-14">

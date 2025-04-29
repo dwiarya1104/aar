@@ -5,7 +5,7 @@ export default function CardProject({ data }) {
     <div
       data-aos="fade-up"
       data-aos-duration="2000"
-      className=" p-10 rounded-2xl md:h-[400px] card-grainy card-shine-effect shadow-white shadow-sm bg-primary my-5 relative overflow-hidden"
+      className=" p-10 rounded-2xl md:h-[350px] card-grainy card-shine-effect shadow-white shadow-sm bg-primary my-5 relative overflow-hidden"
     >
       <div className="card-body">
         <div className="hero">
@@ -14,7 +14,7 @@ export default function CardProject({ data }) {
               <h1 className="md:text-4xl text-3xl font-bold text-white">
                 {data.title}
               </h1>
-              <p className="py-3 text-white text-sm font-thin opacity-70 md:pr-10">
+              <p className="py-3 text-white text-sm font-thin opacity-70 md:pr-10 mt-5">
                 {data.description}
               </p>
               <div className="grid md:grid-cols-4 grid-cols-2 gap-2">
@@ -26,7 +26,7 @@ export default function CardProject({ data }) {
             </div>
             <img
               src={data.image}
-              className="md:max-w-lg rounded-lg shadow-3xl md:absolute right-0 md:mt-20  "
+              className="md:max-w-md rounded-lg shadow-3xl md:absolute right-0 md:mt-20  "
             />
           </div>
         </div>
